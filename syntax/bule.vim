@@ -27,6 +27,8 @@ syn match  buleKeyword    "#inf"
 syn match  buleKeyword    "#supremum"
 syn match  buleKeyword    "#infimum"
 syn match  buleKeyword    "#undef"
+syn match  buleKeyword    "#exist"
+syn match  buleKeyword    "#forall"
 
 syn match  buleFunction   "#min"
 syn match  buleFunction   "#max"
@@ -54,7 +56,8 @@ syn match  buleFunction "#compute"
 syn match  buleVar      "\<_*[A-Z]['a-zA-Z0-9_]*\>'*"
 syn match  buleOperator "=\|<\|<=\|>\|>=\|=\|==\|!="
 syn match  buleNumber   "\<[0123456789]*\>"
-syn match  buleRule     ":-"
+syn match  buleRule     "->"
+syn match  buleRule     "::"
 
 syn sync maxlines=500
 
