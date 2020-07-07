@@ -31,7 +31,7 @@ syn case match
 if exists("zinc_only_highlight_comment_start") && zinc_only_highlight_comment_start
   syn region  zincComment      start=+%[-=%*_]*+ end=+.*$+he=s-1                             contains=zincToDo
 else
-  syn region  zincComment      start=+%+ end=+.*$+                                           contains=zincToDo
+  syn region  zincComment      start=+%+ end=+.*$+                                           contains=zincToDo,@Spell
 endif
 
 syn keyword zincType        ann any array bool enum float int list of record
@@ -57,7 +57,7 @@ syn match   zincOp          +==\|!=\|<>\|=<\|<=\|<\|>=\|=>\|>\|>+
 syn match   zincOp          +\.\.\.+
 
 syn keyword zincToDo        XXX TODO NOTE         
-syn region  zincString       start=+"+ skip=+\\.+ end=+"+                              contains=zincStringFmt
+syn region  zincString       start=+"+ skip=+\\.+ end=+"+                              contains=zincStringFmt,@Spell
 syn match   zincStringFmt    +\\[abfnrtv]\|\\x[0-9a-fA-F]*\\\|%[-+# *.0-9]*[dioxXucsfeEgGp]+                                                                           contained
 
 if !exists("zinc_no_highlight_overlong") || !zinc_no_highlight_overlong
