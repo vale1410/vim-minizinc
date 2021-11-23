@@ -29,6 +29,7 @@ syn match  buleKeyword    "#infimum"
 syn match  buleKeyword    "#undef"
 syn match  buleKeyword    "#exists"
 syn match  buleKeyword    "#forall"
+syn match  buleKeyword    "#ground"
 
 syn match  buleFunction   "#min"
 syn match  buleFunction   "#max"
